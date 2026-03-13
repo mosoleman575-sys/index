@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد سوسن ❤️</title>
+    <!-- خطوط عربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #d4e6ff 0%, #bbd9ff 40%, #9fc5ff 100%);
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 🌟 الخلفية المتحركة بالقلوب (حمراء، زرقاء) والورد */
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart, .heart-blue, .rose {
+            position: absolute;
+            font-size: 1.8rem;
+            opacity: 0.6;
+            user-select: none;
+            animation: float 8s linear infinite;
+            bottom: -10%;
+        }
+
+        .heart {
+            color: #ff3366;
+            text-shadow: 0 0 10px #ff99cc;
+        }
+
+        .heart-blue {
+            color: #3399ff;
+            text-shadow: 0 0 10px #99ccff;
+        }
+
+        .rose {
+            color: #d44b6b;
+            text-shadow: 0 0 8px #ffb3b3;
+            font-size: 2rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0.2;
+            }
+        }
+
+        /* تخصيص كل صفحة */
+        .page {
+            position: relative;
+            z-index: 10;
+            background: rgba(255, 240, 250, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px 20px 50px 20px;
+            box-shadow: 0 30px 50px rgba(100, 150, 255, 0.3), 0 0 0 4px #fff inset, 0 0 0 6px #aac9ff inset;
+            width: 90%;
+            max-width: 750px;
+            padding: 2.5rem 2rem;
+            margin: 30px auto;
+            text-align: center;
+            transition: all 0.5s ease;
+            border: 3px solid #7ba5ff;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        h1, h2, p {
+            color: #1f4a7a;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #cddcff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #205b9c;
+        }
+
+        .question {
+            font-size: 2.7rem;
+            font-weight: 900;
+            background: #ffffffc9;
+            display: inline-block;
+            padding: 0.5rem 2rem;
+            border-radius: 60px;
+            box-shadow: 0 10px 0 #7f9fd6;
+            margin: 20px 0;
+            color: #0f4b8a;
+        }
+
+        /* حاوية الأزرار (زرين جنب بعض) */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 0 #5f7db0, 0 10px 20px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
+            border: 2px solid white;
+        }
+
+        .btn-yes {
+            background: #77dd77;
+            color: #1e4b1e;
+        }
+
+        .btn-yes:hover {
+            background: #99ee99;
+            transform: scale(1.05);
+        }
+
+        .btn-yes2 {
+            background: #7799ff;
+            color: #111e4b;
+        }
+
+        .btn-yes2:hover {
+            background: #99bbff;
+            transform: scale(1.05);
+        }
+
+        /* أزرار المتابعة والإنهاء */
+        .btn-continue, .btn-finish {
+            background: #88aaff;
+            color: #1f2b3d;
+            font-size: 2rem;
+            padding: 15px 60px;
+            margin: 30px auto 10px;
+            display: inline-block;
+            box-shadow: 0 8px 0 #5f7fb3;
+        }
+
+        .btn-finish {
+            background: #ffb347;
+            box-shadow: 0 8px 0 #b37b36;
+            color: #3a2a0e;
+        }
+
+        .btn:active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 #5f7db0;
+        }
+
+        /* حاوية الصور والفيديو */
+        .media-wrapper {
+            background: #e5f0ff;
+            border-radius: 60px 60px 30px 30px;
+            padding: 25px 15px 15px;
+            margin: 25px 0;
+            border: 3px dashed #3f7ec6;
+        }
+
+        .media-placeholder {
+            background: #132235;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 10px 0 #4e699b;
+        }
+
+        video, img {
+            width: 100%;
+            max-height: 400px;
+            display: block;
+            border-radius: 40px;
+            border: 4px solid white;
+            object-fit: cover; /* للصور */
+        }
+
+        /* عبارات جميلة بدلاً من الإرشادات */
+        .lovely-message {
+            font-size: 1.8rem;
+            color: #bc3f6b;
+            background: #fff0f5;
+            padding: 15px;
+            border-radius: 60px;
+            margin-top: 15px;
+            border: 2px solid #ff99bb;
+            box-shadow: 0 5px 0 #c26489;
+            font-weight: bold;
+        }
+
+        /* تنسيق مشغل الأغنية */
+        .audio-player {
+            margin: 25px auto 15px;
+            width: 90%;
+            background: #f0f5ff;
+            border-radius: 60px;
+            padding: 15px 20px;
+            border: 2px solid #5f8ddb;
+            box-shadow: 0 5px 0 #3b5f9e;
+        }
+        audio {
+            width: 100%;
+            outline: none;
+            border-radius: 30px;
+        }
+
+        /* الصفحة الأخيرة (التهنئة) */
+        .final-message {
+            font-size: 3rem;
+            line-height: 1.6;
+        }
+
+        .final-message span {
+            display: inline-block;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+
+        /* ملصقات إضافية */
+        .sticker {
+            position: absolute;
+            font-size: 2rem;
+            z-index: 5;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .st1 { top: 5%; left: 3%; animation: wobble 4s infinite; }
+        .st2 { bottom: 10%; right: 2%; animation: wobble 5s infinite reverse; }
+        .st3 { top: 20%; right: 10%; animation: wobble 6s infinite; }
+        .st4 { bottom: 15%; left: 8%; animation: wobble 7s infinite; }
+        .st5 { top: 40%; left: 15%; animation: wobble 5.5s infinite; }
+        .st6 { bottom: 25%; right: 15%; animation: wobble 4.5s infinite; }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(0deg) translateY(0); }
+            25% { transform: rotate(10deg) translateY(-10px); }
+            75% { transform: rotate(-10deg) translateY(5px); }
+        }
+
+        .candle {
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 6px gold);
+        }
+    </style>
+</head>
+<body>
+    <!-- الخلفية الحية بالقلوب الحمراء والزرقاء والورود -->
+    <div class="floating-bg" id="floatingBg"></div>
+
+    <!-- الصفحة الأولى: السؤال وزرين نعم -->
+    <div id="page1" class="page">
+        <div class="sticker st1">❤️</div>
+        <div class="sticker st2">🌹</div>
+        <div class="sticker st3">💙</div>
+        <div class="sticker st4">💖</div>
+        <div class="sticker st5">🌺</div>
+        <div class="sticker st6">💕</div>
+
+        <h1>🎉  🎉</h1>
+        <div class="question">هل انتِ سوسن ؟</div>
+        
+        <div class="button-container" id="btnContainer">
+            <button class="btn btn-yes" id="yesBtn1">نعم 💕</button>
+            <button class="btn btn-yes2" id="yesBtn2">نعم 💙</button>
+        </div>
+        <p style="font-size:1.7rem; color:#1f4973;">❤️ اضغطي نعم لتبدأ المفاجأة ❤️</p>
+    </div>
+
+    <!-- الصفحة الثانية: الفيديو الأول + متابعة -->
+    <div id="page2" class="page hidden">
+        <h2>🎬 شغلي الفديو </h2>
+        <div class="media-wrapper">
+            <div class="media-placeholder">
+                <video controls poster="https://via.placeholder.com/600x400/ffc0cb/ffffff?text=فيديو+1">
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="lovely-message">
+                🌸 happy birthday to you 🌸
+            </div>
+        </div>
+        <button class="btn btn-continue" id="continue2">متابعة 🎀</button>
+        <div style="margin-top:20px">❤️ 💙 🌹</div>
+    </div>
+
+    <!-- الصفحة الثالثة: صورة + أغنية عيد الميلاد + متابعة -->
+    <div id="page3" class="page hidden">
+        <h2>🎬 ميلاد سعيد يا عسل</h2>
+        <div class="media-wrapper">
+            <div class="media-placeholder">
+                <img src="sosoon_photo.jpg" alt="صورة سوسن" style="width:100%; max-height:400px; object-fit:cover;">
+            </div>
+            <div class="lovely-message">
+                💙 كل عام وانتِ بخير 💙
+            </div>
+        </div>
+
+        <!-- أغنية عيد الميلاد كخلفية (تعمل تلقائياً) -->
+        <div class="audio-player">
+            <audio id="birthdaySong" src="birthday_song.mp3" loop controls>
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+            <p style="font-size:1.4rem; color:#1f4973; margin-top:10px;">🎵  🎵</p>
+        </div>
+
+        <button class="btn btn-continue" id="continue3">متابعة 🎈</button>
+    </div>
+
+    <!-- الصفحة الرابعة: الفيديو الثالث + زر الانهاء -->
+    <div id="page4" class="page hidden">
+        <h2> هي الاغنية أهداء مني الك </h2>
+        <div class="media-wrapper">
+            <div class="media-placeholder">
+                <video controls poster="https://via.placeholder.com/600x400/ffd0dd/ffffff?text=فيديو+3">
+                    <source src="video3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="lovely-message">
+                🎂 وَالحُبُّ لَا يَخْفَى وَإِن لَبِسَ الْفَتَى ثَوبَ الصُّدُودِ وَحُلَّةَ السُّلْوَانِ🎂
+            </div>
+        </div>
+        <button class="btn btn-finish" id="finishBtn">الانهاء 🎂</button>
+    </div>
+
+    <!-- الصفحة الخامسة (بعد الانهاء) : تهنئة نهائية -->
+    <div id="page5" class="page hidden">
+        <div class="sticker st1">🎂</div>
+        <div class="sticker st2">🎁</div>
+        <div class="sticker st3">💐</div>
+        <div class="final-message">
+            <span>🎉</span> 
+            في يومكِ هذا، تتزين الدنيا وتحتفل الملائكة
+            كل عام وأنتِ تاج على رؤوس السنين
+            وصاحبة القلب الذي لا يشبهه قلب...
+             سنينك طوال وأيامك هنية يا صغنونة<span>🎉</span>
+        </div>
+        <div style="font-size:4rem; margin:30px 0;">
+            ❤️ 💙 🌹 🎂
+        </div>
+        <p style="font-size:2rem;">💕 Love You 💕</p>
+        <div style="font-size: 2rem; margin-top:30px;" class="candle">🕯️🕯️🕯️</div>
+    </div>
+
+    <script>
+        (function() {
+            // تهيئة العناصر
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const page3 = document.getElementById('page3');
+            const page4 = document.getElementById('page4');
+            const page5 = document.getElementById('page5');
+            
+            const yesBtn1 = document.getElementById('yesBtn1');
+            const yesBtn2 = document.getElementById('yesBtn2');
+            const continue2 = document.getElementById('continue2');
+            const continue3 = document.getElementById('continue3');
+            const finishBtn = document.getElementById('finishBtn');
+            
+            // عنصر الصوت
+            const birthdaySong = document.getElementById('birthdaySong');
+
+            // تعطيل التشغيل التلقائي الافتراضي للمتصفح (سنقوم بالتشغيل يدوياً عند الانتقال)
+            birthdaySong.autoplay = false;
+
+            // ==================  كلا الزرين نعم ينقلان للصفحة الثانية ==================
+            function goToPage2() {
+                page1.classList.add('hidden');
+                page2.classList.remove('hidden');
+            }
+
+            yesBtn1.addEventListener('click', goToPage2);
+            yesBtn2.addEventListener('click', goToPage2);
+
+            // متابعة من الصفحة 2 -> 3
+            continue2.addEventListener('click', function() {
+                page2.classList.add('hidden');
+                page3.classList.remove('hidden');
+                // تشغيل الأغنية تلقائياً عند الوصول للصفحة الثالثة
+                if (birthdaySong) {
+                    birthdaySong.play().catch(e => {
+                        console.log('لم يتم التشغيل التلقائي، قد يحتاج المستخدم للتفاعل مع الصفحة أولاً');
+                        // يمكن إضافة رسالة صغيرة هنا إذا أردت
+                    });
+                }
+            });
+
+            // متابعة من الصفحة 3 -> 4
+            continue3.addEventListener('click', function() {
+                // إيقاف الأغنة عند مغادرة الصفحة الثالثة
+                if (birthdaySong) {
+                    birthdaySong.pause();
+                    birthdaySong.currentTime = 0; // إعادة الصوت للبداية
+                }
+                page3.classList.add('hidden');
+                page4.classList.remove('hidden');
+            });
+
+            // انهاء من الصفحة 4 -> 5 (تهنئة)
+            finishBtn.addEventListener('click', function() {
+                page4.classList.add('hidden');
+                page5.classList.remove('hidden');
+            });
+
+            // مراقب للتأكد من إيقاف الصوت عند إخفاء الصفحة الثالثة (في حال أي طريقة أخرى)
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (page3.classList.contains('hidden')) {
+                            if (birthdaySong) {
+                                birthdaySong.pause();
+                                birthdaySong.currentTime = 0;
+                            }
+                        } else {
+                            // إذا ظهرت الصفحة الثالثة مجدداً (لا يوجد زر رجوع ولكن للاحتياط)
+                            if (birthdaySong) {
+                                birthdaySong.play().catch(e => {});
+                            }
+                        }
+                    }
+                });
+            });
+            observer.observe(page3, { attributes: true });
+
+            // ==================  إنشاء الخلفية العائمة ==================
+            function createFloatingElements() {
+                const bg = document.getElementById('floatingBg');
+                const numHeartsRed = 20;
+                const numHeartsBlue = 20;
+                const numRoses = 15;
+                
+                for (let i = 0; i < numHeartsRed; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('heart');
+                    heart.innerHTML = '❤️';
+                    setRandomPosition(heart);
+                    bg.appendChild(heart);
+                }
+                for (let i = 0; i < numHeartsBlue; i++) {
+                    const heartBlue = document.createElement('div');
+                    heartBlue.classList.add('heart-blue');
+                    heartBlue.innerHTML = '💙';
+                    setRandomPosition(heartBlue);
+                    bg.appendChild(heartBlue);
+                }
+                for (let i = 0; i < numRoses; i++) {
+                    const rose = document.createElement('div');
+                    rose.classList.add('rose');
+                    rose.innerHTML = '🌹';
+                    setRandomPosition(rose);
+                    bg.appendChild(rose);
+                }
+            }
+
+            function setRandomPosition(el) {
+                const left = Math.random() * 100;
+                const animDuration = 5 + Math.random() * 15;
+                const delay = Math.random() * 10;
+                el.style.left = left + '%';
+                el.style.fontSize = (0.8 + Math.random() * 2) + 'rem';
+                el.style.animationDuration = animDuration + 's';
+                el.style.animationDelay = delay + 's';
+            }
+
+            createFloatingElements();
+
+            // تفاعلية إضافية للقلوب الزرقاء (تكبير عند المرور)
+            const blueHearts = document.querySelectorAll('.heart-blue');
+            blueHearts.forEach(heart => {
+                heart.addEventListener('mouseenter', () => {
+                    heart.style.opacity = '1';
+                    heart.style.transform = 'scale(1.3)';
+                });
+                heart.addEventListener('mouseleave', () => {
+                    heart.style.opacity = '0.6';
+                    heart.style.transform = 'scale(1)';
+                });
+            });
+        })();
+    </script>
+
+    <!-- عبارة صغيرة جانبية (بدون إرشادات) -->
+    <div style="position:fixed; bottom:10px; left:10px; z-index:100; color:#1f4a7a; background:#fff9; padding:5px 15px; border-radius:40px; font-size:1.2rem;">
+        🎁 19 year 💙
+    </div>
+</body>
+</html>
